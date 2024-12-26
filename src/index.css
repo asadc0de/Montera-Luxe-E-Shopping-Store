@@ -1,0 +1,148 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+@font-face {
+  font-family: "Antiqua";
+  src: url("/fonts/OPTIBodoni-Antiqua.ttf") format("truetype");
+  font-weight: normal;
+  font-style: normal;
+}
+
+@font-face {
+  font-family: "CreatoDisplay";
+  src: url("../public/fonts/CreatoDisplay-Regular.otf") format("opentype");
+  font-weight: normal;
+  font-style: normal;
+}
+
+*::selection {
+  background: #18191b;
+  color: #f9f8f7;
+}
+html {
+  scroll-behavior: smooth;
+}
+
+body {
+  font-family: Antiqua;
+  overflow-x: hidden;
+  position: relative;
+}
+.dropdown {
+  filter: drop-shadow(0px 0px 4px #18191bc7);
+}
+#featuredImage::after {
+  content: "MONTERA";
+  position: absolute;
+  top: 4.5%;
+  right: 4.5%;
+  opacity: 0.1;
+  transform: scaleY(2);
+  letter-spacing: -30px;
+}
+
+#footer::after {
+  content: "MONTERA";
+  position: absolute;
+  bottom: 1%;
+  left: 4.5%;
+  opacity: 0.1;
+  transform: scaleY(2);
+  letter-spacing: -30px;
+}
+
+.input-class {
+  padding: 5px 30px 5px 0;
+  width: 100%;
+  font-size: 1.3rem;
+  outline: none;
+  background: none;
+  caret-color: #18191b8f;
+  display: block;
+  border: 0 solid transparent;
+  border-bottom-width: 1px;
+  border-color: #18191b8f;
+  transform-origin: center;
+  transition: border-width 0.4s ease-in-out, transform 0.4s ease-in-out;
+}
+
+/* Animation when expanding */
+.expand {
+  border-width: 0 0 1px 0;
+  transform: scaleX(1);
+}
+
+/* Animation when shrinking */
+.shrink {
+  border-width: 0;
+  transform: scaleX(0);
+}
+
+/* Base label styles */
+label {
+  transform: translateY(0) scale(1);
+}
+
+/* When active (input has value or is focused) */
+label.active {
+  transform: translateY(-21px) scale(0.7);
+  opacity: 1;
+}
+
+/* Wrapper class to position the input and the pseudo-element */
+.inputWrapper {
+  position: relative;
+}
+
+/* Initial state for the ::after pseudo-element */
+.inputWrapper::after {
+  content: "";
+  position: absolute;
+  bottom: 0;
+  left: 50%;
+  width: 0%; /* Start with 0% width */
+  height: 1px; /* Adjust the thickness of the line */
+  border-bottom: 1px solid #18191b; /* Border color */
+  transition: all 0.5s ease-in-out;
+  transform-origin: center;
+}
+
+/* When the input is focused, expand the border */
+.inputWrapper:focus-within::after {
+  width: 100%; /* Expand the border to 100% */
+  left: 0%; /* Reset left to 0% for full width expansion */
+}
+
+/* CSS */
+.button-53 {
+  border: 1px solid #18191b;
+  cursor: pointer;
+  position: relative;
+  user-select: none;
+  -webkit-user-select: none;
+  touch-action: manipulation;
+}
+
+.button-53:after {
+  content: "";
+  background-color: #f9f8f7;
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  z-index: -1;
+  scale: 0;
+  border-bottom: 0px;
+  border-right: 0px;
+  transition: border-width 0.2s ease, top 0.2s ease, left 0.2s ease;
+}
+
+.button-53:hover:after {
+  border-bottom: 4px solid #18191b; /* Add border on hover */
+  border-right: 4px solid #18191b; /* Add border on hover */
+  scale: 1;
+  top: 4px; /* Move the border slightly downward */
+  left: 4px; /* Move the border slightly to the right */
+}
