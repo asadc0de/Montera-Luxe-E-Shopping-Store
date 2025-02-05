@@ -1,10 +1,13 @@
 import React, { useEffect, useState } from "react";
 import FilterIcon from "./FilterIcon";
 import SortIcon from "./SortIcon";
+import { useNavigate } from "react-router-dom";
 
 const DropDown = () => {
+  const [currentOptionSelected, setCurrentOptionSelected] = useState("All Products");
+  const navigate = useNavigate();
   const dropDownOptions = {
-    filterOptions: ["All", "Men", "Women", "Shoes", "Kids"],
+    filterOptions: ["All Products", "Men", "Women", "Scarves", "Kids"],
     sortOptions: ["Default", "Low to High", "High to Low"],
   };
 
@@ -40,6 +43,12 @@ const DropDown = () => {
     };
   }, []);
 
+  const selectCurrentOption = (e) => {
+    const selectedText = e.target.textContent; // Get the clicked textContent
+    setCurrentOptionSelected(selectedText); // Update state
+    navigate(`/allproducts?filter_by=${selectedText}`)
+  };
+
   return (
     <section className="flex justify-between items-center font-CreatoDisplay font-[500]">
       {/* Filter Dropdown */}
@@ -56,6 +65,7 @@ const DropDown = () => {
               {dropDownOptions.filterOptions.map((option, index) => (
                 <li
                   key={index}
+                  onClick={(e) => selectCurrentOption(e)}
                   className="border text-center cursor-pointer px-3 py-1 hover:border-primaryBG border-transparent relative z-50 w-full hover:opacity-75 duration-100"
                 >
                   {option}

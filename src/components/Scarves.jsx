@@ -6,6 +6,7 @@ import SingleProduct from "./SingleProduct";
 const Scarves = () => {
   const [scarves, setScarves] = useState([]);
   const data = useContext(ProductContext);
+  const componentName = 'scarves';
 
   useEffect(() => {
     const fetchData = async () => {
@@ -28,7 +29,7 @@ const Scarves = () => {
   useEffect(() => {
     if (scarves.length > 0) {
       scarves.forEach((scarf) => {
-        console.log(scarf.id); // Log the id of each scarf
+        // console.log(scarf.id); // Log the id of each scarf
       });
     }
   }, [scarves]);
@@ -45,9 +46,9 @@ const Scarves = () => {
       <div className="grid lg:grid-cols-3 sm:grid-cols-2 grid-cols-1 gap-3 mt-5 gap-y-10">
         {/* Product */}
         {scarves.map((product, i) => {
-          console.log(product.id); // Log the id to see if it's correct
+          // console.log(product.id); // Log the id to see if it's correct
           return (
-            <NavLink to={`/product/${product.id}`} key={i}>
+           <NavLink to={`/product/${componentName}/${product.id}`} key={i}>
               <SingleProduct product={{ ...product }} />
             </NavLink>
           );

@@ -6,6 +6,7 @@ import SingleProduct from "./SingleProduct";
 const KidsProducts = () => {
   const [kids, setKids] = useState([]);
   const data = useContext(ProductContext);
+  const componentName = 'kids';
 
   useEffect(() => {
     if (data.products && data.products.kids && data.products.kids.length > 0) {
@@ -28,7 +29,7 @@ const KidsProducts = () => {
       <div className="grid lg:grid-cols-3 sm:grid-cols-2 grid-cols-1 gap-3 mt-5 gap-y-10">
         {/* Prodcuct */}
         {kids.map((product, i) => (
-          <NavLink to="/product" key={i}>
+         <NavLink to={`/product/${componentName}/${product.id}`} key={i}>
             <SingleProduct product={{ ...product }} />
           </NavLink>
         ))}

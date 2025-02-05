@@ -1,9 +1,9 @@
 const products = {
   products: {
-    
+
     men: [
       {
-        id: 1,
+        id: 'm18247382',
         name: "Casual Shirt",
         price: "$30",
         category: "men",
@@ -22,7 +22,7 @@ const products = {
         ],
       },
       {
-        id: 2,
+        id: 'm18247383',
         name: "Acid Washed Hoodie",
         price: "$50",
         category: "men",
@@ -41,7 +41,7 @@ const products = {
         ],
       },
       {
-        id: 3,
+        id: 'm18247384',
         name: "Jogging Trousers",
         price: "$40",
         category: "men",
@@ -60,7 +60,7 @@ const products = {
         ],
       },
       {
-        id: 4,
+        id: 'm18247385',
         name: "Acid Washed T-Shirt",
         price: "$25",
         category: "men",
@@ -79,7 +79,7 @@ const products = {
         ],
       },
       {
-        id: 5,
+        id: 'm18247386',
         name: "Jogging Trousers",
         price: "$35",
         category: "men",
@@ -98,7 +98,7 @@ const products = {
         ],
       },
       {
-        id: 6,
+        id: 'm18247387',
         name: "Acid Washed T-Shirt",
         price: "$28",
         category: "men",
@@ -120,7 +120,7 @@ const products = {
 
     women: [
       {
-        id: 1,
+        id: 'w18247382',
         name: "Ribbed Knit Trousers",
         price: "$50",
         category: "women",
@@ -139,7 +139,7 @@ const products = {
         ],
       },
       {
-        id: 2,
+        id: 'w18247383',
         name: "Oversized Cropped Sweatshirt",
         price: "$55",
         category: "women",
@@ -154,11 +154,11 @@ const products = {
           "/src/context/women G2 (1).jpeg",
           "/src/context/women G2 (2).webp",
           "/src/context/women G2 (3).webp",
-          "/src/context/women G2 (4).jpg",
+          "/src/context/women G2 (4).webp",
         ],
       },
       {
-        id: 3,
+        id: 'w18247384',
         name: "Knit Culottes",
         price: "$60",
         category: "women",
@@ -173,11 +173,11 @@ const products = {
           "/src/context/women G3 (1).jpeg",
           "/src/context/women G3 (2).webp",
           "/src/context/women G3 (3).webp",
-          "/src/context/women G3 (4).jpg",
+          "/src/context/women G3 (4).webp",
         ],
       },
       {
-        id: 4,
+        id: 'w18247385',
         name: "Jogging Trousers",
         price: "$45",
         category: "women",
@@ -192,11 +192,11 @@ const products = {
           "/src/context/women G4 (1).jpeg",
           "/src/context/women G4 (2).webp",
           "/src/context/women G4 (3).webp",
-          "/src/context/women G4 (4).jpg",
+          "/src/context/women G4 (4).webp",
         ],
       },
       {
-        id: 5,
+        id: 'w18247386',
         name: "Scuba Jogging Trousers",
         price: "$65",
         category: "women",
@@ -211,11 +211,11 @@ const products = {
           "/src/context/women G5 (1).jpeg",
           "/src/context/women G5 (2).webp",
           "/src/context/women G5 (3).webp",
-          "/src/context/women G5 (4).jpg",
+          "/src/context/women G5 (4).webp",
         ],
       },
       {
-        id: 6,
+        id: 'w18247387',
         name: "Ribbed Knit Trousers",
         price: "$50",
         category: "women",
@@ -230,14 +230,14 @@ const products = {
           "/src/context/women G6 (1).jpeg",
           "/src/context/women G6 (2).webp",
           "/src/context/women G6 (3).webp",
-          "/src/context/women G6 (4).jpg",
+          "/src/context/women G6 (4).webp",
         ],
       },
     ],
 
     kids: [
       {
-        id: "k1-001",
+        id: 'k18247382',
         name: "Embroidered Jacquard Waistcoat",
         price: "$20",
         category: "kids",
@@ -256,7 +256,7 @@ const products = {
         ],
       },
       {
-        id: "k2-002",
+        id: 'k18247383',
         name: "Embroidered Jacquard Waistcoat",
         price: "$22",
         category: "kids",
@@ -275,7 +275,7 @@ const products = {
         ],
       },
       {
-        id: "k3-003",
+        id: 'k18247384',
         name: "Dobby Suit",
         price: "$18",
         category: "kids",
@@ -294,7 +294,7 @@ const products = {
         ],
       },
       {
-        id: "k4-004",
+        id: 'k18247385',
         name: "Cambric Suit",
         price: "$25",
         category: "kids",
@@ -313,7 +313,7 @@ const products = {
         ],
       },
       {
-        id: "k5-005",
+        id: 'k18247386',
         name: "Dobby Suit",
         price: "$19",
         category: "kids",
@@ -332,7 +332,7 @@ const products = {
         ],
       },
       {
-        id: "k6-006",
+        id: 'k18247387',
         name: "Dyed Dobby Suit",
         price: "$23",
         category: "kids",
@@ -354,7 +354,7 @@ const products = {
 
     scarves: [
       {
-        id: 1,
+        id: 's18247382',
         name: "Cape Shawl",
         price: "$65",
         category: "scarves",
@@ -373,7 +373,7 @@ const products = {
         ],
       },
       {
-        id: 2,
+        id: 's18247383',
         name: "Cape Shawl",
         price: "$70",
         category: "scarves",
@@ -392,7 +392,7 @@ const products = {
         ],
       },
       {
-        id: 3,
+        id: 's18247384',
         name: "Soft Woven Scarf",
         price: "$75",
         category: "scarves",
@@ -411,7 +411,7 @@ const products = {
         ],
       },
       {
-        id: 4,
+        id: 's18247385',
         name: "Cape Shawl",
         price: "$80",
         category: "scarves",
@@ -430,7 +430,7 @@ const products = {
         ],
       },
       {
-        id: 5,
+        id: 's18247386',
         name: "Soft Woven Scarf",
         price: "$85",
         category: "scarves",
@@ -449,7 +449,7 @@ const products = {
         ],
       },
       {
-        id: 6,
+        id: 's18247387',
         name: "Soft Woven Scarf",
         price: "$90",
         category: "scarves",

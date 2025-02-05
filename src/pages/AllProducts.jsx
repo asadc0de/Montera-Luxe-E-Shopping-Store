@@ -1,4 +1,4 @@
-import React, { useEffect } from "react";
+import React, { useContext, useEffect, useState } from "react";
 import NavBar from "../components/NavBar";
 import DropDown from "../components/DropDown";
 import Footer from "../components/Footer";
@@ -7,14 +7,31 @@ import WomenProducts from "../components/WomenProducts";
 import MenProducts from "../components/MenProducts";
 import KidsProducts from "../components/KidsProducts";
 import Scarves from "../components/Scarves";
+import { useSearchParams } from "react-router-dom";
+import { ProductContext } from "../context/Context";
 
 const AllProducts = () => {
+  const data = useContext(ProductContext);
+const [searchParams] = useSearchParams();
+const filterBy = searchParams.get("filter_by") || "All Products"; // Default to "all"
+const [filteredProducts, setFilteredProducts] = useState([]);
 
-  // Scroll to top
+useEffect(() => {
+  // Combine all products from different categories into a single array
+  const allProducts = Object.values(data.products || {}).flat();
+
+  // Filter products based on the `filter_by` value
+  const filtered = filterBy === "all"
+    ? allProducts // Show all products if filter is "all"
+    : allProducts.filter((product) => product.category.toLowerCase() === filterBy.toLowerCase()); // Match category
+
+  setFilteredProducts(filtered); // Update state with filtered products
+}, [filterBy, data]);
+
+  // Scroll to the top when the component mounts
   useEffect(() => {
     window.scrollTo(0, 0);
   }, []);
-
   return (
     <div>
       <NavBar />
