@@ -30,8 +30,15 @@ useEffect(() => {
 
   // Scroll to the top when the component mounts
   useEffect(() => {
-    window.scrollTo(0, 0);
+    const hasScrolled = localStorage.getItem("hasScrolledToTop");
+
+    if (!hasScrolled) {
+      window.scrollTo(0, 0);
+      localStorage.setItem("hasScrolledToTop", "true");
+    }
   }, []);
+
+  
   return (
     <div>
       <NavBar />

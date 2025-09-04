@@ -1,5 +1,7 @@
 import React from "react";
 import Button from "./Button";
+import img1 from '../assets/img1.jpg';
+import img2 from '../assets/img2.webp';
 import { NavLink } from "react-router-dom";
 
 const Header = () => {
@@ -18,7 +20,7 @@ const Header = () => {
             <img
             
               className="w-full h-full object-cover"
-              src="../src/assets/img1.jpg"
+              src={img1}
               alt="hero-image1"
             />
           </div>
@@ -31,7 +33,7 @@ const Header = () => {
           <div className="md:w-[20vw] w-[80%] h-[88vw] md:h-[22vw] overflow-hidden">
             <img
               className="w-full h-full object-cover duration-300 hover:scale-[1.06]"
-              src="../src/assets/img2.webp"
+              src={img2}
               alt="hero-image2"
             />
           </div>

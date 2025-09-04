@@ -1,5 +1,8 @@
 import React from "react";
 import Button from "./Button";
+import ar1 from '../assets/arrival (1).png';
+import ar2 from '../assets/arrival (2).png';
+import ar3 from '../assets/arrival (3).png';
 import { NavLink } from "react-router-dom";
 
 const NewArrival = () => {
@@ -15,7 +18,7 @@ const NewArrival = () => {
             <div className="overflow-hidden w-fit">
               <img
                 className="md:w-[26vw] w-[40vw] md:h-[33vw] h-[40] object-cover duration-300 hover:scale-[1.06]"
-                src="/src/assets/arrival (1).png"
+                src={ar1}
                 alt="arrival-product1"
               />
             </div>
@@ -34,7 +37,7 @@ const NewArrival = () => {
         <div className="overflow-hidden w-fit">
           <img
             className="md:w-[21vw] w-[45vw] md:h-[23vw] h-[78vw] object-cover duration-300 hover:scale-[1.06]"
-            src="/src/assets/arrival (2).png"
+            src={ar2}
             alt="arrival-product2"
           />
           </div>
